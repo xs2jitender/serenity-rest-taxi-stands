@@ -1,8 +1,9 @@
-Feature: Find available place types
+  Feature: Find available place types
   In order to make my application more flexible
   As an application developer
   I want to know about the types of places supported by the TFL API
 
+    @issue:TES-1
   Scenario Outline: List all available place types in different formats
     When I retrieve all the available place types in <format>
     Then I should see at least the following place types:

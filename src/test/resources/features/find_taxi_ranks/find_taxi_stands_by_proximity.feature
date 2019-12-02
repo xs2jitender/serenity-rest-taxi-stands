@@ -3,6 +3,7 @@ Feature: Find taxi stands by proximity
   As an inebriated business man
   I want to find the taxi stand nearest to my current location
 
+  @issue:TES-3
   Scenario Outline: All the taxi ranks within a given distance should be shown
     Given Joe is at <station>
     When he looks for the closest taxi rank within <distance> meters
@@ -15,6 +16,7 @@ Feature: Find taxi stands by proximity
       | Canary Wharf          | 100      | 3               |
       | Canary Wharf          | 20       | 0               |
 
+  @issue:TES-4
   Scenario: The closest taxi rank should appear first
     Given Joe is at London Bridge Station
     When he looks for the closest taxi rank within 500 meters
@@ -22,6 +24,7 @@ Feature: Find taxi stands by proximity
       | commonName                       | distance  |
       | Tooley Street (Duke Street Hill) | 182.06776 |
 
+  @issue:TES-5
   Scenario: Where there are no taxi stands nearby none should be found
     Given Joe is at London Bridge Station
     When he looks for the closest taxi rank within 50 meters
